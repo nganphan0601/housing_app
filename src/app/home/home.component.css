@@ -1,0 +1,51 @@
+:root{
+    --button-color: rgb(55, 142, 171);
+}
+/* why is the variable not working? */
+.result{
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+input[type="text"]{
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 30%;
+}
+
+.primary{
+    padding: 10px;
+    border: solid 1px rgb(55, 142, 171);
+    background-color: rgb(55, 142, 171);
+    color: white;
+    border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px)
+{
+    .result{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input[type="text"]{
+        width: 70%;
+    }
+}
+
+@media (max-width: 499px)
+{
+    .result{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    input[type="text"]{
+        width: 100%;
+    }
+}

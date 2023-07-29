@@ -1,0 +1,8 @@
+
+Run this command to install the dependencies needed to run the app.
+
+npm install
+
+Run this command to build and serve the default app.
+
+ng serve

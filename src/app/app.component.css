@@ -1,0 +1,15 @@
+.brand-name{
+    display: flex;
+}
+.brand-logo{
+    padding-left: 10px;
+}
+.brand-title{
+    /* padding-bottom: 0; */
+    padding-left: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(33, 127, 185);
+    font-weight: 800;
+}
