@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-color: rgb(0, 129, 204);
+    
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.primary{
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
