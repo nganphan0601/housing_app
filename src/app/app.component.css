@@ -1,6 +1,7 @@
 
 #logo{
     display: flex;
+    padding-left: 50px;
 }
 #login{
     padding: 10px 15px;
