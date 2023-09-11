@@ -12,7 +12,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   template: `
   <article>
     <div class="container">
-    <img class="listing-photo" src="{{baseUrl + '/' + housingLocation?.photo}}"
+    <img class="listing-photo" [src]="housingLocation?.photo"
       alt="Exterior photo of {{housingLocation?.name}}"/>
       <div class="overlay">
       <div class="text"><h2 class="section-heading" (click)="displayForm()" >Apply now to live here</h2></div>
@@ -58,7 +58,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-  baseUrl:string = 'https://angular.io/assets/images/tutorials/faa';
+  
 
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
@@ -73,9 +73,7 @@ export class DetailsComponent {
 
   constructor() {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
-    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
-      this.housingLocation = housingLocation;
-    });
+    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
     }
 
   submitApplication() {
